@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: app-service-csharp-webapi  # Application. Rename to appropriate name
+metadata:
+    template: azd-init@1.6.1
+services:
+  web-api:   # Service name. Used to tag Azure Resources
+    project: ./src/api  
+    dist: .
+    language: csharp
+    host: appservice
